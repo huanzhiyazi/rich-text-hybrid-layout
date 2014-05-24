@@ -15,8 +15,8 @@ Android 客户端进行显示。
 类型，你可以实现一个 IParser ，但是要注意不同富文本之间正则表达式的包含关系，避免重复解析，具体请参考 com.example.hybarrangedemo.utils.WeburlParser 的实现。
 
 <b>富文本解析器的使用方式：</b>
-    // 通过迭代方式构造解析器。
-    IParser parser = new SmileyParser(mContext);
+		// 通过迭代装饰方式构造解析器。
+		IParser parser = new SmileyParser(mContext);
 		parser = new ImageParser(mContext, parser);
 		parser = new HyperlinkParser(mContext, parser);
 		parser = new WeburlParser(mContext, parser);
