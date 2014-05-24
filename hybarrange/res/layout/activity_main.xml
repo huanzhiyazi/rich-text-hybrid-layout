@@ -1,0 +1,36 @@
+<!--
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hybarrangedemo.MainActivity"
+    tools:ignore="MergeRootFrame" >
+    
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp" />
+    
+</FrameLayout>
+-->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff5991e5"
+    tools:context="com.example.hybarrangedemo.MainActivity"
+    tools:ignore="MergeRootFrame" >
+	<ListView
+    	android:id="@android:id/list"
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:divider="#00000000"
+    	android:listSelector="#00000000"
+    	android:layout_marginBottom="10dip" />
+
+</FrameLayout>
+
