@@ -15,8 +15,8 @@ Android 客户端进行显示。
 类型，你可以实现一个 IParser ，但是要注意不同富文本之间正则表达式的包含关系，避免重复解析，具体请参考 com.example.hybarrangedemo.utils.WeburlParser 的实现。
 
 关于图片加载：
-图片的异步加载使用了@nostra13 大神的 Android-Universal-Image-Loader 组件（https://github.com/nostra13/Android-Universal-Image-Loader），这是一个强大到令人发指的图片加载神器，它几乎包括了所有你
-能想象到的所有图片加载的功能。
+图片的异步加载使用了@nostra13 大神的 Android-Universal-Image-Loader 组件https://github.com/nostra13/Android-Universal-Image-Loader
+这是一个强大到令人发指的图片加载神器，它几乎包括了所有你能想象到的所有图片加载的功能。
 
 关于缺点：
 1. 其正则规律具有包含关系的不同富文本的处理缺乏可扩展性，目前只对 Web url ，图片，超链接这三种特定的富文本进行了过滤处理，以
