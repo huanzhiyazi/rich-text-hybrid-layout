@@ -14,6 +14,23 @@ Android 客户端进行显示。
 主要集中在在源代码的 com.example.hybarrangedemo.utils 包中，这是一个用装饰模式封装的富文本解析组件，如果你需要添加新的富文本
 类型，你可以实现一个 IParser ，但是要注意不同富文本之间正则表达式的包含关系，避免重复解析，具体请参考 com.example.hybarrangedemo.utils.WeburlParser 的实现。
 
+<b>富文本解析器的使用方式：</b>
+    // 通过迭代方式构造解析器。
+    IParser parser = new SmileyParser(mContext);
+		parser = new ImageParser(mContext, parser);
+		parser = new HyperlinkParser(mContext, parser);
+		parser = new WeburlParser(mContext, parser);
+		
+		// 执行解析并返回解析文本段队列。
+		ParseManager manager = new ParseManager();
+		ArrayList<ParsedSegment> segments = manager.parse(parser, rich);
+		
+其中 ParsedSegment 中包含了解析和用 span 修饰过的文本段，有两个字段：
+1. text 解析和用 span 修饰过的文本；
+2. 文本类型：未知类型（纯文本或者非图片富文本）或图片。
+
+
+
 关于图片加载：
 图片的异步加载使用了@nostra13 大神的 Android-Universal-Image-Loader 组件https://github.com/nostra13/Android-Universal-Image-Loader
 这是一个强大到令人发指的图片加载神器，它几乎包括了所有你能想象到的所有图片加载的功能。
