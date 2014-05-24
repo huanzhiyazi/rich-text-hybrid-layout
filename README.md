@@ -26,7 +26,8 @@ Android 客户端进行显示。
 		ParseManager manager = new ParseManager();
 		ArrayList<ParsedSegment> segments = manager.parse(parser, rich);
 		
-其中 ParsedSegment 中包含了解析和用 span 修饰过的文本段，有两个字段：
+其中 rich 为需要解析的格式化的输入文本， ParsedSegment 中包含了解析和用 span 修饰过的文本段，有两个字段：
+
 1. text 解析和用 span 修饰过的文本；
 2. 文本类型：未知类型（纯文本或者非图片富文本）或图片。
 
